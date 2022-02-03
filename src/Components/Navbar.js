@@ -4,6 +4,7 @@ import {
     NavLink, 
     Bars,
     NavMenu, 
+    MyImage,
 } from './NavbarElements';
 
 
@@ -11,16 +12,17 @@ const Navbar = () => {
     return (
         <>
             <Nav>
+                <MyImage to = './' >Football<span>STATS</span></MyImage>
                 <Bars />
                 <NavMenu >
-                    <NavLink to = './'> 
-                        Home
-                    </NavLink>
                     <NavLink to = './Players'>
                         Players
                     </NavLink>
                      <NavLink to = './WorldCup'>
                         WorldCup
+                    </NavLink>
+                    <NavLink to = './ChampionsLeague'>
+                        ChampionsLeague
                     </NavLink>
                 </NavMenu>
             </Nav>

@@ -5,14 +5,22 @@ import Table from '../Standings.js';
 import Match from '../Match.js';
 import styled from 'styled-components' 
 import {YourAPI, startdate, enddate} from '../API.js'
+import  { Link } from 'react-router-dom'
+import {useNavigate} from "react-router-dom";
 
 function ShowLeague(props) {    
 
     const {state} = useLocation ();
-    
+
     const [standingList, setStandingList] = useState([]); 
     const [competitionInfo, setInfoList] = useState([]);
     const [matchInfo, setMatchList] = useState([])
+
+    let navigate = useNavigate(); 
+    const routeChange = () =>{ 
+        let path = `/`; 
+        navigate(path);
+    }
     
     const tableHeader = () =>
         <div style={{ display: "flex"}}>
@@ -46,7 +54,8 @@ function ShowLeague(props) {
     return(
     <div>
         <ContentDivTable>
-            <Header >{competitionInfo.name} standings</Header>
+            <button onClick = {routeChange}> Go Back</button>
+            <Header > {competitionInfo.name} standings</Header>
             {tableHeader()}
             {standingList.map((Team) => (
                 <Table 
@@ -75,6 +84,7 @@ function ShowLeague(props) {
                 score = {match.score}
                 utcDate = {match.utcDate}
                 matchday = {match.season.currentMatchday}
+                stage = {match.stage}
                 /> 
             ))}
         </ContentDivMatch>

@@ -1,0 +1,39 @@
+select {
+    border:1;
+    /*background: #9b9797;*/
+    flex: 1;
+    padding: 0 .5em;
+    color: black;
+    cursor:pointer;
+    font-size: 1em;
+    font-family: 'Open Sans', sans-serif;
+ }
+
+ .select {
+    position: relative;
+    display: flex;
+    width: 40em;
+    height: 2em;
+    line-height: 3;
+    overflow: hidden;
+    border-radius: .25em;
+    vertical-align: middle;
+    
+ }
+ .select::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 1em;
+    background: #2b2e2e;
+    cursor:pointer;
+    pointer-events:none;
+    transition:.25s all ease;
+ }
+
+.toptext {
+   display: table-cell;
+   padding : 1px; 
+   font-size: 1em;
+   font-family: 'Open Sans', sans-serif;
+ }

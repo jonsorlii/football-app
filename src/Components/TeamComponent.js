@@ -1,10 +1,8 @@
 import React, {useState, useEffect} from 'react'
 import styled from 'styled-components' 
-import 'react-dropdown/style.css';
 import moment from 'moment';
 
 function TeamComponent({team}) {
-    let DOB = 0; 
   return(
     <> 
         <Header> <Image src = {team.crestUrl}/>{team.name}</Header>
@@ -15,9 +13,9 @@ function TeamComponent({team}) {
             {team.squad.map((player) => (
                 <PlayerCard key = {player.id }> 
                 <PlayerName> {player.name}  </PlayerName>
-                <Position> Position: {player.position} </Position> 
-                <Nationality> Nationality: {player.nationality} </Nationality>
-                <Age> Age: {moment().diff(player.dateOfBirth, 'years')} </Age>
+                <Data> Position: {player.position} </Data> 
+                <Data> Nationality: {player.nationality} </Data>
+                <Data> Age: {moment().diff(player.dateOfBirth, 'years')} </Data>
                 </PlayerCard>
             ))
             }
@@ -49,7 +47,7 @@ const Image = styled.img`
 const Header = styled.div`
     display:flex; 
     text-align:center;
-    font-family: 'Muli', sans-serif;
+    font-family Montserrat, sans-serif
     position: relative;
     font-size: 2em;
 `;
@@ -60,7 +58,7 @@ const Header2 = styled(Header)`
 
 const PlayerCard = styled.div`
 	background-color: #fafafa;
-	border: 1px solid rgba(0,0,0,0.1);
+	border: solid 1px rgba(0, 0, 0, 0.08);
 	border-radius: 7px;
     vertical-align: top;
 	margin: 5px;
@@ -73,15 +71,9 @@ const PlayerCard = styled.div`
 
 const PlayerName = styled.div`
     font-size: 1em;
+    font-family Montserrat, sans-serif
 `
 
-const Position = styled.div`
-    font-size: 0.7em;
-`
-
-const Nationality = styled.div`
-    font-size: 0.7em;
-`
-const Age = styled.div`
+const Data = styled(PlayerName)`
     font-size: 0.7em;
 `

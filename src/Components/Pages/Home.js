@@ -8,6 +8,7 @@ import LALIGA from '../../Icons/LALIGA.jpg';
 import LIGUE1 from '../../Icons/LIGUE1.jpg';
 import SERIEA from '../../Icons/SERIEA.jpg';
 
+
 //Picture and league code, code is a number used when clicking a symbol, the league id will follow when redirecting
 const imageContainer = {2021 : PL, 2002 : BUNDES, 2014 : LALIGA, 2015: LIGUE1, 2019  : SERIEA}
 
@@ -15,9 +16,7 @@ function Home() {
     let navigate = useNavigate(); 
     return(
         <div>
-            <Header>
-            Choose your league
-            </Header> 
+            <Header> Choose your league </Header> 
             <Content display = "flexed">
             {Object.entries(imageContainer).map(([key, value]) => (
                 <div key = {key}>
@@ -25,9 +24,8 @@ function Home() {
                         <Image image={value}/>
                     </Card>
                 </div> 
-            ))
+            ))}
 
-            } 
             </Content> 
         </div> 
     );}
@@ -45,7 +43,12 @@ const Card = styled.div`
 	width: 210px;
     height: 200 px; 
     overflow: hidden;
-    cursor: pointer
+    
+    &:hover{
+        background: #e1e1e1;
+        border: 2px solid #d0d0d0;
+        cursor: pointer
+    }
 `;
 
 const Image = styled.div`
@@ -62,6 +65,7 @@ const Header = styled.div `
     font-family: 'Muli', sans-serif;
     position: relative;
     font-size: 3em;
+    font-weight: 1000;
 `;
 
 const Content = styled.div`

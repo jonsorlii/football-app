@@ -21,4 +21,12 @@ var enddate = moment();
 enddate = enddate.add(7, "days")
 enddate = enddate.format("YYYY-MM-DD")
 
-export {enddate, startdate}
+var clDateStart= moment();
+clDateStart = clDateStart.subtract(30, "days");
+clDateStart = clDateStart.format("YYYY-MM-DD");
+
+var clDateEnd = moment(); 
+clDateEnd = clDateEnd.add(30, "days")
+clDateEnd = clDateEnd.format("YYYY-MM-DD")
+
+export {enddate, startdate, clDateStart, clDateEnd}

@@ -2,26 +2,31 @@ import React from 'react'
 import styled from 'styled-components'; 
 
 
-function Match({homeTeam, awayTeam, status, score , utcDate, matchday}) {
+function Match({homeTeam, awayTeam, status, score , utcDate, matchday, stage}) {
     return(
   <>
     {status === 'SCHEDULED' ? 
       <MatchCard>  
         <TeamNames > {homeTeam.name} - {awayTeam.name} </TeamNames>
-        <Date> {utcDate.slice(0,10)} </Date>  
+        {stage !== 'REGULAR_SEASON' ?
+            <Status> {stage} </Status>
+          : 
+            null
+        }
+        <Date> {utcDate.slice(0,10)}  </Date>  
         <Time> {utcDate.slice(11,16)} </Time>
       </MatchCard> 
       : 
       <MatchCard>  
+      <TeamNames > {homeTeam.name} - {awayTeam.name} </TeamNames>
         <Status> {status} </Status> 
-        <Date> {utcDate.slice(0,10)} </Date>  
-        <Time> {utcDate.slice(11,16)} </Time>
         {status === 'FINISHED' ?
           <Score>FT: {score.fullTime.homeTeam} - {score.fullTime.awayTeam}</Score> 
         : 
           null
         }
-        <TeamNames > {homeTeam.name} - {awayTeam.name} </TeamNames>
+        <Date> {utcDate.slice(0,10)} </Date>  
+        <Time> {utcDate.slice(11,16)} </Time>
       </MatchCard>}
   </>
 );}
