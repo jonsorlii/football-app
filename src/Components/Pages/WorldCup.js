@@ -57,8 +57,7 @@ const Name = styled.div`
     float : left;
     vertical-align: top;
 `
-const Year = styled(Name)`
-`
+
 const Image = styled.img`
 	float:left;
     width: 40px;

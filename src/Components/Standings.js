@@ -5,7 +5,7 @@ function Table({position, icon, name, gamesPlayed, win, draw, lost, goalDifferen
     return (
         <TableRow >
             <TableNumberFirst> {position} </TableNumberFirst> 
-            <TableIconName> <Image src = {icon}/> {name} </TableIconName> 
+            <TaTeamName> <Image src = {icon}/> {name} </TaTeamName> 
             <TableNumber> {gamesPlayed} </TableNumber> 
             <TableNumber> {win} </TableNumber> 
             <TableNumber> {draw} </TableNumber> 
@@ -20,12 +20,13 @@ export default Table;
 const TableRow = styled.div`
   display: flex;
   flex-direction: row;
+  fontSize : 1px; 
 `
 
-const TableIconName = styled.div`
+const TaTeamName = styled.div`
 position: relative;
     padding: .5em;
-    width : 12em;
+    width : 15em;
     border-bottom: solid #360037 1px;
     border-left: 0;
     display: flex;
@@ -36,7 +37,7 @@ position: relative;
 const TableNumber = styled.div`
     box-sizing: content-box;
     padding: .5em;
-    width: 2em;
+    width: 1em;
     border: solid #360037 1px;
     border-top: 0;
     border-right: 0;
@@ -44,7 +45,7 @@ const TableNumber = styled.div`
 const TableNumberLast = styled.div`
     box-sizing: content-box;
     padding: .5em;
-    width: 2em;
+    width: 1em;
     border: solid #360037 1px;
     border-top: 0;
     border-right: 1;
@@ -53,7 +54,7 @@ const TableNumberLast = styled.div`
 const TableNumberFirst = styled.div`
     box-sizing: content-box;
     padding: .5em;
-    width: 2em;
+    width: 1em;
     border: solid #360037 1px;
     border-top: 0;
     border-right: 1;

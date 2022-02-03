@@ -5,8 +5,7 @@ import Table from '../Standings.js';
 import Match from '../Match.js';
 import styled from 'styled-components' 
 import {YourAPI, startdate, enddate} from '../API.js'
-import  { Link } from 'react-router-dom'
-import {useNavigate} from "react-router-dom";
+import { NavLink as Link } from 'react-router-dom';
 
 function ShowLeague(props) {    
 
@@ -15,12 +14,6 @@ function ShowLeague(props) {
     const [standingList, setStandingList] = useState([]); 
     const [competitionInfo, setInfoList] = useState([]);
     const [matchInfo, setMatchList] = useState([])
-
-    let navigate = useNavigate(); 
-    const routeChange = () =>{ 
-        let path = `/`; 
-        navigate(path);
-    }
     
     const tableHeader = () =>
         <div style={{ display: "flex"}}>
@@ -53,9 +46,9 @@ function ShowLeague(props) {
 
     return(
     <div>
+        <Button> <Link to = "/"> Home </Link></Button>
         <ContentDivTable>
-            <button onClick = {routeChange}> Go Back</button>
-            <Header > {competitionInfo.name} standings</Header>
+            <Header >  {competitionInfo.name} standings</Header>
             {tableHeader()}
             {standingList.map((Team) => (
                 <Table 
@@ -75,7 +68,6 @@ function ShowLeague(props) {
         <ContentDivMatch> 
             <Header >Fixtures</Header>
             {matchInfo.map((match) => (
-
                 <Match 
                 key = {match.id} 
                 homeTeam = {match.homeTeam}
@@ -94,7 +86,7 @@ function ShowLeague(props) {
 export default ShowLeague;
 
 const Number = styled.div`
-width: 2em;
+width: 1em;
 padding: .5em;
 border: solid #360037 1px;
 border-right: 0;
@@ -103,14 +95,14 @@ font-weight: 400;
 
 //These are probably to much: 
 const NumberLast = styled.div`
-width: 2em;
+width: 1em;
 padding: .5em;
 border: solid #360037 1px;
 border-right: 1;
 font-weight: 400;
 `
 const TeamName = styled.div`
-width: 12em;
+width: 15em;
 padding: .5em;
 border: solid #360037 1px;
 border-right: 0;
@@ -139,4 +131,11 @@ text-align:center;
 font-family: 'Muli', sans-serif;
 position: relative;
 font-size: 2em;
+`;
+
+const Button = styled.div `
+float:left;
+flex-wrap: wrap;
+max-width: auto;
+align-items: flex-start;
 `;

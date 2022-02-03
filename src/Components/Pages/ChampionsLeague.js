@@ -6,31 +6,34 @@ import styled from 'styled-components'
 
 
 function ChampionsLeague() {
+  
   const [competitionInfo, setInfoList] = useState([]);
 
+  //Get CL matches 
   useEffect(() => {
         Axios.get(`http://api.football-data.org/v2/competitions/2001/matches?dateFrom=${clDateStart}&dateTo=${clDateEnd}`, YourAPI).then((response) => {
             setInfoList(response.data.matches)
-            console.log(response.data)
+            console.log(clDateStart)
         }); 
     }, [])
   return( 
   <ContentDivMatch> 
-            <Header >Previous and upcoming CL matches (+/- 1 month)</Header>
-            {competitionInfo.map((match) => (
-
-                <Match 
-                key = {match.id} 
-                homeTeam = {match.homeTeam}
-                awayTeam = {match.awayTeam}
-                status = {match.status} 
-                score = {match.score}
-                utcDate = {match.utcDate}
-                matchday = {match.season.currentMatchday}
-                stage = {match.stage}
-                /> 
-            ))}
-        </ContentDivMatch>
+    <Header >Upcoming CL matches</Header>
+    {competitionInfo.map((match) => (
+      <MatchCard key = {match.id} >
+        <Match 
+        key = {match.id} 
+        homeTeam = {match.homeTeam}
+        awayTeam = {match.awayTeam}
+        status = {match.status} 
+        score = {match.score}
+        utcDate = {match.utcDate}
+        matchday = {match.season.currentMatchday}
+        stage = {match.stage}
+        /> 
+      </MatchCard>
+    ))}
+    </ContentDivMatch>
   );
 }
 
@@ -48,4 +51,15 @@ text-align:center;
 font-family: 'Muli', sans-serif;
 position: relative;
 font-size: 2em;
+`;
+
+const MatchCard = styled.div`
+	background-color: #fafafa;
+	border: solid 1px rgba(0, 0, 0, 0.08);
+	border-radius: 7px;
+	margin: 5px;
+  display: inline-block;
+	width: 400px;
+  height: 20 px; 
+  overflow: hidden;
 `;

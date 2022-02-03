@@ -12,7 +12,7 @@ function App(props) {
     <Router>
       <Navbar/>
         <Routes>
-         <Route path = "/" element = {<Home />}/> 
+          <Route path = "/" element = {<Home />}/> 
           <Route path = "/leagueinfo" element = {<ShowLeague />}/> 
           <Route path = "/players" element = {<Players />}/> 
           <Route path = "/worldcup" element = {<WorldCup />}/> 
@@ -23,5 +23,3 @@ function App(props) {
 }
 export default App;
 
-{/*   
-                     <Route path = "/ChampionsLeague" element = {<ChampionsLeague />}/> */}

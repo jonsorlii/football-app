@@ -22,7 +22,7 @@ enddate = enddate.add(7, "days")
 enddate = enddate.format("YYYY-MM-DD")
 
 var clDateStart= moment();
-clDateStart = clDateStart.subtract(30, "days");
+clDateStart = clDateStart.subtract(0, "days");
 clDateStart = clDateStart.format("YYYY-MM-DD");
 
 var clDateEnd = moment(); 
