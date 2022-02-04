@@ -24,4 +24,4 @@ The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
 ## API - KEY
-To get the desired data, you have to create a free API-token here: https://www.football-data.org/client/register This key must be inserted in "API.js" which is located under src -> Components -> API.js. Inside export const YourAPI, change the X-Auth-Token to your given API key. 
+To get the desired data, you have to create a free API-token here: https://www.football-data.org/client/register This key must be inserted in "API.js" which is located under src -> Components -> API.js. Inside the variable YourAPI, change the X-Auth-Token to your given API key. 
