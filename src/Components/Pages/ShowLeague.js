@@ -15,6 +15,7 @@ function ShowLeague(props) {
     const [competitionInfo, setInfoList] = useState([]);
     const [matchInfo, setMatchList] = useState([])
     
+    //Top row in table
     const tableHeader = () =>
         <div style={{ display: "flex"}}>
             <Number>P</Number>
@@ -27,6 +28,7 @@ function ShowLeague(props) {
             <NumberLast>Pts</NumberLast>
         </div>
 
+    //Get league standings
     useEffect(() => {
         Axios.get(`http://api.football-data.org/v2/competitions/${state}/standings`, YourAPI).then((response) => {
             const league = response.data.competition
@@ -36,6 +38,7 @@ function ShowLeague(props) {
         }); 
     }, [])
 
+    //Get matches from startdate to enddate
     useEffect(() => {
         Axios.get(`http://api.football-data.org/v2/competitions/${state}/matches?dateFrom=${startdate}&dateTo=${enddate}`, YourAPI).then((response) => {
             const match = response.data.matches 
