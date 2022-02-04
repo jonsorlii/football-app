@@ -33,46 +33,46 @@ function Home() {
 export default Home;
 
 const Card = styled.div`
-	background-color: #fafafa;
-	border: 1px solid rgba(0,0,0,0.1);
-	border-radius: 7px;
-    vertical-align: top;
-	margin: 10px;
-	position: relative;
-    display: inline-block;
-	width: 210px;
-    height: 200 px; 
-    overflow: hidden;
-    
-    &:hover{
-        background: #e1e1e1;
-        border: 2px solid #d0d0d0;
-        cursor: pointer
-    }
+background-color: #fafafa;
+border: 1px solid rgba(0,0,0,0.1);
+border-radius: 7px;
+vertical-align: top;
+margin: 10px;
+position: relative;
+display: inline-block;
+width: 210px;
+height: 200 px; 
+overflow: hidden;
+
+&:hover{
+background: #e1e1e1;
+border: 2px solid #d0d0d0;
+cursor: pointer
+}
 `;
 
 const Image = styled.div`
-    objectFit: 'cover';
-	background-size: cover;
-	background-position: center;
-  	width: 100%;
-	height: 200px;
-    background-image: url('${props => props.image}');
+objectFit: 'cover';
+background-size: cover;
+background-position: center;
+width: 100%;
+height: 200px;
+background-image: url('${props => props.image}');
 `;
 
 const Header = styled.div `
-    text-align:center;
-    font-family: 'Muli', sans-serif;
-    position: relative;
-    font-size: 3em;
-    font-weight: 1000;
+text-align:center;
+font-family: 'Muli', sans-serif;
+position: relative;
+font-size: 3em;
+font-weight: 1000;
 `;
 
 const Content = styled.div`
-	display: flex; 
-	justify-content: center; 
-	flex-wrap: wrap;
-	max-width: auto;
-	align-items: flex-start;
+display: flex; 
+justify-content: center; 
+flex-wrap: wrap;
+max-width: auto;
+align-items: flex-start;
 `;
 
