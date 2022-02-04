@@ -42,40 +42,40 @@ padding : 15px
 
 const TeamNames = styled.div`
 justify-content: center;
-  display:flex; 
-	font-size: 15px;
-	height: 100%;
-	vertical-align: top;
+display:flex; 
+font-size: 15px;
+height: 100%;
+vertical-align: top;
 `;
 
 const Date = styled.div`
-	font-size: 10px;
-	padding: 3px;
-  textAlignVertical: center;
-  justify-content: center;
-  display:flex; 
+font-size: 10px;
+padding: 3px;
+textAlignVertical: center;
+justify-content: center;
+display:flex; 
 `;
 
 const Time = styled.div`
-	font-size: 10px;
-	padding: 3px;
-  textAlignVertical: center;
-  justify-content: center;
-  display:flex; 
+font-size: 10px;
+padding: 3px;
+textAlignVertical: center;
+justify-content: center;
+display:flex; 
 `;
 
 const Status = styled.div`
-  font-size: 10px;
-	padding: 3px;
-  textAlignVertical: center;
-  justify-content: center;
-  display:flex; 
+font-size: 10px;
+padding: 3px;
+textAlignVertical: center;
+justify-content: center;
+display:flex; 
 `
 
 const Score = styled.div`
-  font-size: 10px;
-	padding: 3px;
-  textAlignVertical: center;
-  justify-content: center;
-  display:flex; 
+font-size: 10px;
+padding: 3px;
+textAlignVertical: center;
+justify-content: center;
+display:flex; 
 `
