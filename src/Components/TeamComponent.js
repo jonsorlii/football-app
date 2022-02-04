@@ -26,54 +26,54 @@ function TeamComponent({team}) {
 export default TeamComponent;
 
 const Squad = styled.div`
-    position : absolute; 
-    float : left;
-    justify-content: left; 
-    flex-wrap: wrap;
-    max-width: auto;
-    align-items: flex-start;
-    padding : 10px
-    padding-top = 1px;
+position : absolute; 
+float : left;
+justify-content: left; 
+flex-wrap: wrap;
+max-width: auto;
+align-items: flex-start;
+padding : 10px
+padding-top = 1px;
 `
 const Image = styled.img`
-	display: block;
-	width: 40px;
-	height: 40px;
-	z-index: 2;
-	object-fit: cover;
-    padding : 2px
+display: block;
+width: 40px;
+height: 40px;
+z-index: 2;
+object-fit: cover;
+padding : 2px
 `;
 
 const Header = styled.div`
-    display:flex; 
-    text-align:center;
-    font-family Montserrat, sans-serif
-    position: relative;
-    font-size: 2em;
+display:flex; 
+text-align:center;
+font-family Montserrat, sans-serif
+position: relative;
+font-size: 2em;
 `;
 
 const Header2 = styled(Header)`
-    font-size : 1em; 
+font-size : 1em; 
 `
 
 const PlayerCard = styled.div`
-	background-color: #fafafa;
-	border: solid 1px rgba(0, 0, 0, 0.08);
-	border-radius: 7px;
-    vertical-align: top;
-	margin: 5px;
-	position: relative;
-    display: inline-block;
-	width: 150px;
-    height: 20 px; 
-    overflow: hidden;
+background-color: #fafafa;
+border: solid 1px rgba(0, 0, 0, 0.08);
+border-radius: 7px;
+vertical-align: top;
+margin: 5px;
+position: relative;
+display: inline-block;
+width: 150px;
+height: 20 px; 
+overflow: hidden;
 `;
 
 const PlayerName = styled.div`
-    font-size: 1em;
-    font-family Montserrat, sans-serif
+font-size: 1em;
+font-family Montserrat, sans-serif
 `
 
 const Data = styled(PlayerName)`
-    font-size: 0.7em;
+font-size: 0.7em;
 `
