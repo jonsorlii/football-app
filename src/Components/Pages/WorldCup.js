@@ -35,34 +35,34 @@ const DataDiv = styled.div`
 `
 
 const TeamCard = styled.div`
-	background-color: #fafafa;
-	border: 1px solid rgba(0,0,0,0.1);
-	border-radius: 7px;
-	margin: 5px;
-	position: auto;
-    display: inline-block;
-	width: 125px;
-    height: 20 px; 
+background-color: #fafafa;
+border: 1px solid rgba(0,0,0,0.1);
+border-radius: 7px;
+margin: 5px;
+position: auto;
+display: inline-block;
+width: 125px;
+height: 20 px; 
 `;
 
 const Header = styled.div`
-    text-align:center;
-    font-family: 'Muli', sans-serif;
-    position: relative;
-    font-size: 2em;
+text-align:center;
+font-family: 'Muli', sans-serif;
+position: relative;
+font-size: 2em;
 `;
 
 const Name = styled.div`
-    font-size : 1em; 
-    float : left;
-    vertical-align: top;
+font-size : 1em; 
+float : left;
+vertical-align: top;
 `
 
 const Image = styled.img`
-	float:left;
-    width: 40px;
-	height: 40px;
-	z-index: 2;
-	object-fit: cover;
-    padding : 2px
+float:left;
+width: 40px;
+height: 40px;
+z-index: 2;
+object-fit: cover;
+padding : 2px
 `;
