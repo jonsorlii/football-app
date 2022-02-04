@@ -5,7 +5,7 @@ export const YourAPI =
     headers: 
     {
         //insert your api token here
-        "X-Auth-Token": '8da3e899169e4a6e9364b53bd9bdde44' ,
+        "X-Auth-Token": 'INSERT KEY HERE' ,
         "content-type": "application/json"
     }
 };

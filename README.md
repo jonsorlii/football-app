@@ -1,3 +1,5 @@
+# Written in React Js 
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -20,3 +22,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
+
+## API - KEY
+To get the desired data, you have to create a free API-token here: https://www.football-data.org/client/register This key must be inserted in "API.js" which is located under src -> Components -> API.js. Inside the variable YourAPI, change the X-Auth-Token to your given API key. 
