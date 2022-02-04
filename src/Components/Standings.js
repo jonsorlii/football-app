@@ -18,53 +18,53 @@ function Table({position, icon, name, gamesPlayed, win, draw, lost, goalDifferen
 export default Table;
 
 const TableRow = styled.div`
-  display: flex;
-  flex-direction: row;
-  fontSize : 1px; 
+display: flex;
+flex-direction: row;
+fontSize : 1px; 
 `
 
 const TaTeamName = styled.div`
 position: relative;
-    padding: .5em;
-    width : 15em;
-    border-bottom: solid #360037 1px;
-    border-left: 0;
-    display: flex;
-   align-items:center;
+padding: .5em;
+width : 15em;
+border-bottom: solid #360037 1px;
+border-left: 0;
+display: flex;
+align-items:center;
 `
 
 //These are probably to much: 
 const TableNumber = styled.div`
-    box-sizing: content-box;
-    padding: .5em;
-    width: 1em;
-    border: solid #360037 1px;
-    border-top: 0;
-    border-right: 0;
+box-sizing: content-box;
+padding: .5em;
+width: 1em;
+border: solid #360037 1px;
+border-top: 0;
+border-right: 0;
 `
 const TableNumberLast = styled.div`
-    box-sizing: content-box;
-    padding: .5em;
-    width: 1em;
-    border: solid #360037 1px;
-    border-top: 0;
-    border-right: 1;
+box-sizing: content-box;
+padding: .5em;
+width: 1em;
+border: solid #360037 1px;
+border-top: 0;
+border-right: 1;
 `
 
 const TableNumberFirst = styled.div`
-    box-sizing: content-box;
-    padding: .5em;
-    width: 1em;
-    border: solid #360037 1px;
-    border-top: 0;
-    border-right: 1;
+box-sizing: content-box;
+padding: .5em;
+width: 1em;
+border: solid #360037 1px;
+border-top: 0;
+border-right: 1;
 `
 
 const Image = styled.img`
-	display: block;
-	width: 25px;
-	height: 25px;
-	z-index: 2;
-	object-fit: cover;
-    padding : 2px
+display: block;
+width: 25px;
+height: 25px;
+z-index: 2;
+object-fit: cover;
+padding : 2px
 `;
