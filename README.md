@@ -13,6 +13,9 @@ Before you can open the project locally on your computer, you will need to insta
 
 ### `npm install`
 
+## API - KEY
+To get the desired data, you have to create a free API-token here: https://www.football-data.org/client/register This key must be inserted in "API.js" which is located under src -> Components -> API.js. Inside export const YourAPI, change the X-Auth-Token to your given API key. 
+
 In the project directory, you can run:
 
 ### `npm start`
