@@ -54,12 +54,12 @@ font-size: 2em;
 `;
 
 const MatchCard = styled.div`
-	background-color: #fafafa;
-	border: solid 1px rgba(0, 0, 0, 0.08);
-	border-radius: 7px;
-	margin: 5px;
-  display: inline-block;
-	width: 400px;
-  height: 20 px; 
-  overflow: hidden;
+background-color: #fafafa;
+border: solid 1px rgba(0, 0, 0, 0.08);
+border-radius: 7px;
+margin: 5px;
+display: inline-block;
+width: 400px;
+height: 20 px; 
+overflow: hidden;
 `;
